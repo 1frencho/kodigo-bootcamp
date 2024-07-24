@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Coffee Practice - HTML" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>Coffee Practice</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header role="banner">
+      <a href="#"><i class="fa-solid fa-coffee"></i>Coffee Practice</a>
+      <ul class="navList">
+        <li class="active">
+          <a href="index.html">Home</a>
+        </li>
+        <li><a href="index.html">Blogs</a></li>
+        <li><a href="#Courses">Courses</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <div class="fa-solid fa-bars" id="menu-icon"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Start -->
+    <div class="hero-img" id="Home">
+      <section>
+        <div class="hero-text">
+          <h1>Coffee Blog: <span>Tips and Courses</span></h1>
+          <p>
+            Learn from our experts and get the best tips and advice on coffee
+            and how to make it perfect.
+          </p>
+          <a href="#Courses" class="btn-primary">Learn More</a>
+        </div>
+      </section>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Main Start -->
+    <section id="Courses">
+      <div class="middle-text pb1">
+        <h2>Our Next Courses and Workshops</h2>
+      </div>
+      <div class="courses-content pt1">
+        <table class="responsive-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Entry Limit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="assets/img/curso1.jpg" class="animate" alt="course" />
+              </td>
+              <td>
+                <h3>Extraction of Coffee Beans</h3>
+              </td>
+              <td>$10</td>
+              <td>
+                <span>1</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/img/curso2.jpg" class="animate" alt="course" />
+              </td>
+              <td>
+                <h3>4 Coffee Recipes for Beginners</h3>
+              </td>
+              <td>$20</td>
+              <td>
+                <span>2</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/img/curso3.jpg" class="animate" alt="course" />
+              </td>
+              <td>
+                <h3>5 Best Coffee Recipes</h3>
+              </td>
+              <td>$20</td>
+              <td>
+                <span>2</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer id="Contact">
+      <div class="details">
+        <div class="logo">
+          <a href="#"><i class="fa-solid fa-coffee"></i>Coffee Practice</a>
+        </div>
+        <div class="main-d">
+          <!-- Location -->
+          <a href="#Contact">
+            <i class="fa-solid fa-map-location-dot"></i> Main Road, New York,
+            USA
+          </a>
+        </div>
+        <div class="main-d">
+          <!-- Phone -->
+          <a href="#Contact">
+            <i class="fa-solid fa-phone"></i> +1 (000) 000-0000
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/scripts.js"></script>
+  </body>
+</html>
