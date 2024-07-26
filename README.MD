@@ -4,6 +4,11 @@
 MÓDULO 1: FUNDAMENTOS DE DESARROLLO WEB
 ```
 
+- 01 - https://burger-grid.netlify.app/
+- 02 - https://coffee-practice.netlify.app/
+- 03 - https://bootstrap-food-grid-with-cart.netlify.app/
+- 04 - https://resp-omelette-recipe.netlify.app/
+
 ```
 MÓDULO 2: FUNDAMENTOS DE JAVASCRIPT
 ```
