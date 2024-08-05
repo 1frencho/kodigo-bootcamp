@@ -8,6 +8,7 @@ MÓDULO 1: FUNDAMENTOS DE DESARROLLO WEB
 - 02 - https://coffee-practice.netlify.app/
 - 03 - https://bootstrap-food-grid-with-cart.netlify.app/
 - 04 - https://resp-omelette-recipe.netlify.app/
+- 05 - https://frencho-fylo-landing-page.netlify.app/
 
 ```
 MÓDULO 2: FUNDAMENTOS DE JAVASCRIPT

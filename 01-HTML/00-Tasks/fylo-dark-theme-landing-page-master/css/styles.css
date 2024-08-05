@@ -1,0 +1,341 @@
+/* Import Google Font -Raleway  https://fonts.google.com/specimen/Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Import Google Font -Open Sans  https://fonts.google.com/specimen/Open+Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #1b2330;
+  --card-color: #21293c;
+  --neutral-color: hsl(0, 0%, 100%);
+  --primary-color: hsl(198, 60%, 50%);
+  --secondary-color: hsl(176, 68%, 64%);
+  --footer-color: #0c1524;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* ;(  :( 😥*/
+body {
+  background-color: var(--bg-color);
+  color: var(--neutral-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background-image: url('../images/bg-curvy-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--neutral-color);
+  transition: all 0.3s ease;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+header {
+  margin: 1rem 2rem;
+}
+
+header nav {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  li a {
+    color: var(--neutral-color);
+  }
+}
+
+main {
+  margin: 1rem 3rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 90vh;
+  img {
+    width: 70vh;
+  }
+}
+.hero-body {
+  line-height: 30px;
+  max-width: 450px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.7rem 3rem;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+  color: var(--neutral-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: var(--neutral-color);
+  }
+}
+
+section {
+  margin: 5rem 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin: 6rem 0;
+  padding-top: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.features .element {
+  margin: 1rem;
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin: 3rem 0;
+}
+
+.description-body {
+  transition: all 0.5s ease;
+  h2 {
+    line-height: 2.6rem;
+  }
+  max-width: 450px;
+  line-height: 25px;
+}
+
+.btn-link {
+  display: inline-block;
+  color: var(--primary-color);
+  /* Línea debajo del link sin usar text-decoration: underline; */
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--primary-color);
+  i {
+    margin: 0 0.5rem;
+  }
+  &:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+}
+
+section.reviews {
+  margin: 6rem;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card-review {
+  background-color: var(--card-color);
+  border-radius: 0.5rem;
+  padding: 30px;
+  p {
+    line-height: 25px;
+  }
+  transition: all;
+}
+
+article .author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 0.5rem;
+  }
+}
+
+.author-body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p {
+    margin: 5px 0;
+    font-size: 0.7rem;
+  }
+  h4 {
+    margin: 0;
+  }
+}
+
+.marketing {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 100px 20vw 0;
+  position: relative;
+  top: 120px;
+}
+
+.marketing-header {
+  margin: 2rem;
+}
+
+.marketing-body {
+  width: 100%;
+}
+
+.marketing-body input {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 2rem;
+  width: 300px;
+}
+
+footer {
+  background: var(--footer-color);
+  padding: 1rem;
+  padding-top: 200px;
+}
+
+footer .logo {
+  margin: 1rem 3rem;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+}
+
+.footer-item {
+  margin: 0.5rem;
+  color: var(--neutral-color);
+}
+
+.footer-item ul {
+  padding: 0;
+}
+
+.footer-item li {
+  margin: 0.5rem 0;
+}
+
+.social-media i {
+  color: var(--neutral-color);
+  padding: 0.5rem;
+  border: 1px solid var(--neutral-color);
+  border-radius: 50%;
+
+  &:hover {
+    background-color: var(--neutral-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+}
+
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    color: var(--neutral-color);
+  }
+}
+
+@media (max-width: 868px) {
+  .hero img,
+  .description img {
+    width: 100%;
+  }
+
+  .marketing-body input {
+    text-align: center;
+    padding: 0.7rem 0;
+    width: 100%;
+  }
+
+  section.reviews,
+  .marketing {
+    margin: 1rem;
+  }
+
+  .description,
+  .reviews {
+    flex-direction: column;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  footer section {
+    flex-direction: column;
+    text-align: c;
+    margin: 1rem;
+  }
+  .footer-item {
+    margin: 0;
+  }
+}
