@@ -1,0 +1,4 @@
+https://github.com/1frencho/kodigo-bootcamp/tree/main/02-Javascript/00-Tasks/01-Control-Structure
+
+01 - (Ex. 5) https://frencho-cars-percentage.netlify.app/
+02 - (Ex. 10) https://frencho-students-summary.netlify.app/

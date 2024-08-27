@@ -16,6 +16,7 @@ MÓDULO 2: FUNDAMENTOS DE JAVASCRIPT
 
 - 01 - (Ex. 5) https://frencho-cars-percentage.netlify.app/
 - 02 - (Ex. 10) https://frencho-students-summary.netlify.app/
+- 03 - (Class Task) https://manage-cart-frencho.netlify.app/
 
 ```
 MÓDULO 3: DESARROLLO FRONTEND CON REACT
