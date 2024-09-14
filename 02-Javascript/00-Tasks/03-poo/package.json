@@ -1,0 +1,19 @@
+{
+  "name": "03-poo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/output.css && tsc && vite build",
+    "preview": "vite preview",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  }
+}

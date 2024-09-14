@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/output.css" />
+
+    <!-- Import 'Arial' | 'Verdana' | 'Georgia' | 'Times New Roman' fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arial&family=Verdana&family=Georgia&family=Times+New+Roman&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Kodigo - POO</title>
+  </head>
+  <body class="hidden">
+    <main
+      class="flex flex-col items-center justify-center p-10 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat h-full gap-y-5"
+    >
+      <div class="bg-white rounded-lg p-10 shadow-md my-4" id="ex-1">
+        <h1>Actividad sobre POO - Marcos Alfaro - CTRL + SHIFT + I</h1>
+      </div>
+      <!-- Exercise 1 -->
+      <div class="bg-white rounded-lg p-10 shadow-md" id="ex-1">
+        <h2 class="text-2xl font-medium">Ejercicio 1</h2>
+        <p>
+          Crear una clase Cabecera Pagina, que contenga 3 métodos, el primer
+          método que obtenga el título, color y fuente de la página, El segundo
+          método que indique como desea que aparezca el título si centrado,
+          derecha o izquierda y el tercer método que imprima todas las
+          propiedades.
+        </p>
+        <div class="pt-5 text-xl" id="result1"></div>
+
+        <form id="form-1">
+          <div class="bg-white rounded-lg p-5 shadow-md flex flex-col gap-2">
+            <label for="title">Título:</label>
+            <input
+              required
+              type="text"
+              id="title"
+              name="title"
+              class="w-full p-2 border-2 rounded-lg"
+            />
+            <label for="color">Color:</label>
+            <select
+              id="color"
+              class="w-full p-2 border-2 rounded-lg"
+              name="color"
+            >
+              <option value="black">Negro</option>
+              <option value="cyan">Cyan</option>
+              <option value="red">Rojo</option>
+              <option value="blue">Azul</option>
+              <option value="green">Verde</option>
+            </select>
+            <label for="font">Fuente:</label>
+            <select
+              name="font"
+              id="font"
+              class="w-full p-2 border-2 rounded-lg"
+            >
+              <option value="Arial">Arial</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Georgia">Georgia</option>
+            </select>
+            <label for="titlePosition">Posición del título:</label>
+            <select
+              name="titlePosition"
+              id="titlePosition"
+              class="w-full p-2 border-2 rounded-lg"
+            >
+              <option value="center">Centrado</option>
+              <option value="right">Derecha</option>
+              <option value="left">Izquierda</option>
+            </select>
+            <button
+              type="submit"
+              class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded transition-all duration-300 ease-in-out"
+            >
+              Imprimir
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Exercise 2 -->
+      <div class="bg-white rounded-lg p-10 shadow-md w-full" id="ex-2">
+        <h2 class="text-2xl font-medium">Ejercicio 2</h2>
+        <p>
+          Crear una clase Calculadora que contendrá los siguientes métodos: •
+          Sumar • Restar • Multiplicar • Dividir • Potencia • Factorial
+        </p>
+        <div
+          class="pt-5 flex md:flex-row flex-col gap-2 justify-center align-center"
+          id="result2"
+        >
+          <div class="bg-white rounded-lg p-5 shadow-md flex flex-col gap-2">
+            <p>Sumar: <span id="plus">0 + 0 = 0</span></p>
+          </div>
+          <div class="bg-white rounded-lg p-5 shadow-md flex flex-col gap-2">
+            <p>Restar: <span id="minus">0 - 0 = 0</span></p>
+          </div>
+          <div class="bg-white rounded-lg p-5 shadow-md flex flex-col gap-2">
+            <p>Multiplicar: <span id="multiply">0 * 0 = 0</span></p>
+          </div>
+          <div class="bg-white rounded-lg p-5 shadow-md flex flex-col gap-2">
+            <p>Dividir: <span id="divide">0 / 0 = 0</span></p>
+          </div>
+          <div class="bg-white rounded-lg p-5 shadow-md flex flex-col gap-2">
+            <p>Potencia: <span id="power">0 ^ 0 = 0</span></p>
+          </div>
+          <div class="bg-white rounded-lg p-5 shadow-md flex flex-col gap-2">
+            <p>Factorial: <span id="factorial"> 0 ! = 1 </span></p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg p-5 shadow-md flex flex-col gap-2">
+          <label for="a">A: (Único para número factorial)</label>
+          <input
+            required
+            type="number"
+            id="a"
+            name="a"
+            min="0"
+            value="0"
+            class="w-full p-2 border-2 rounded-lg"
+          />
+          <label for="b">B:</label>
+          <input
+            required
+            type="number"
+            id="b"
+            name="b"
+            min="1"
+            value="1"
+            class="w-full p-2 border-2 rounded-lg"
+          />
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
