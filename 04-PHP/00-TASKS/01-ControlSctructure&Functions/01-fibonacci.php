@@ -26,13 +26,15 @@ function FibonacciGenerator($n)
   }
 }
 
+// Segundo intento - El correcto.
 function FibonacciGenerator2($n)
 {
-  if (!is_numeric($n)) {
-    echo 'Valor invalido.';
+  if (!is_numeric($n) || $n < 0 || intval($n) != $n) {
+    echo 'Valor inválido. Debe ser un número entero no negativo.';
     return;
   }
-  echo "<br/>Serie Fibonacci -  Segundo Intento <br/>";
+
+  echo "<br/>Serie Fibonacci - Segundo Intento <br/>";
   $start = 0;
   $lastNumber = 1;
 
@@ -43,6 +45,7 @@ function FibonacciGenerator2($n)
     $lastNumber = $nextNumber;
   }
 }
+
 
 // Llamada a la función para generar los primeros 10 términos
 FibonacciGenerator(10);
