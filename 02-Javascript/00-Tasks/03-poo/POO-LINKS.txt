@@ -1,0 +1,8 @@
+Los ejercicios fueron desarrollados siguiendo los patrones de POO y solamente intenté practicar con dos de los ejercicios usando el DOM, que igual
+creo que no era necesario, solo quería probar.
+
+https://frencho-oop-act.netlify.app/
+
+Repositorio con los demás ejercicios que los resultados si fueron por consola.
+
+https://github.com/1frencho/kodigo-bootcamp/tree/main/02-Javascript/00-Tasks/03-poo/src

@@ -22,11 +22,13 @@ MÓDULO 2: FUNDAMENTOS DE JAVASCRIPT
 ```
 MÓDULO 3: DESARROLLO FRONTEND CON REACT
 ```
-
+- 01 - (Task 1) https://github.com/1frencho/web-apple-music-demo
+- 02 - (Task 2) https://github.com/1frencho/basic-auth-firebase-products-crud-redux-toolkit
+- 03 - (Task 3) https://github.com/joshpalaciosv/FrontEnd-Accomodations
 ```
 MÓDULO 4: FUNDAMENTOS DE PHP Y PROGRAMACIÓN BACKEND
 ```
-
+- 01 - (Task 1) 
 ```
 MÓDULO 5: PROGRAMACIÓN ORIENTADA A OBJETOS Y GESTIÓN DE DATOS
 ```

@@ -1,3 +1,6 @@
 [submodule "02-Javascript/00-Tasks/02-Quiz-Challenge"]
 	path = 02-Javascript/00-Tasks/02-Quiz-Challenge
 	url = https://github.com/1frencho/quiz-challenge-vite-vanillia-ts
+[submodule "03-React/00-Tasks/01-Apple-Music-Demo"]
+	path = 03-React/00-Tasks/01-Apple-Music-Demo
+	url = https://github.com/1frencho/web-apple-music-demo
