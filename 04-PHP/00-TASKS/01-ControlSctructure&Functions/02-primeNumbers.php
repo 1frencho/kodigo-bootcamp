@@ -44,3 +44,21 @@ function arrEsPrimo($arr_numbers)
 }
 
 arrEsPrimo($arr_numbers);
+
+/* Resultados
+Es número primo.
+El número 1 No es número primo.
+El número 2 Es número primo.
+El número 3 Es número primo.
+El número 4 No es número primo.
+El número 5 Es número primo.
+El número 10 No es número primo.
+El número 8 No es número primo.
+El número 20 No es número primo.
+El número 35 No es número primo.
+El número 70 No es número primo.
+El número 20 No es número primo.
+El número 15 No es número primo.
+El número 60 No es número primo.
+
+*/

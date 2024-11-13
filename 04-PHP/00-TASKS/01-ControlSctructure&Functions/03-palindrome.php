@@ -42,3 +42,18 @@ foreach ($arr_words as $word) {
   $result = esPalindromo($word) ? "si" : "no";
   echo "La palabra: $word " . $result . " es palindromo. <br/>";
 }
+
+
+/** RESULTADO
+La palabra: radar si es palindromo.
+La palabra: radar sí es palíndromo.
+
+La palabra: radar si es palindromo.
+La palabra: oso si es palindromo.
+La palabra: ala si es palindromo.
+La palabra: reconocer si es palindromo.
+La palabra: caza fantasmas no es palindromo.
+La palabra: ranita no es palindromo.
+La palabra: CASA no es palindromo.
+La palabra: RADAR si es palindromo.
+ */

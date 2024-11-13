@@ -52,3 +52,30 @@ FibonacciGenerator(10);
 
 // Llamada a la función para generar los primeros 10 términos
 FibonacciGenerator2(10);
+
+/*
+Serie Fibonacci - Primer Intento
+Serie N°0 -> 0 + 1 = 1
+Serie N°1 -> 1 + 1 = 2
+Serie N°2 -> 1 + 2 = 3
+Serie N°3 -> 2 + 3 = 5
+Serie N°4 -> 3 + 5 = 8
+Serie N°5 -> 5 + 8 = 13
+Serie N°6 -> 8 + 13 = 21
+Serie N°7 -> 13 + 21 = 34
+Serie N°8 -> 21 + 34 = 55
+Serie N°9 -> 34 + 55 = 89
+
+Serie Fibonacci - Segundo Intento
+Serie N°0 -> 0
+Serie N°1 -> 1
+Serie N°2 -> 1
+Serie N°3 -> 2
+Serie N°4 -> 3
+Serie N°5 -> 5
+Serie N°6 -> 8
+Serie N°7 -> 13
+Serie N°8 -> 21
+Serie N°9 -> 34
+
+*/

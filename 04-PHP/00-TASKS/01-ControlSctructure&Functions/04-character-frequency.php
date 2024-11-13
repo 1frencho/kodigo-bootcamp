@@ -34,3 +34,24 @@ echo "<h2>$myString</h2>";
 echo '<pre>';
 print_r(characterFrequency($myString));
 echo '</pre>';
+
+
+/*
+"Todos seremos unos cacahuetes"
+Array
+(
+    [t] => 2
+    [o] => 4
+    [d] => 1
+    [s] => 5
+    [e] => 4
+    [r] => 1
+    [m] => 1
+    [u] => 2
+    [n] => 1
+    [c] => 2
+    [a] => 2
+    [h] => 1
+)
+
+*/
