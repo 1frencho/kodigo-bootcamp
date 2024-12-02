@@ -2,7 +2,9 @@
 
 ## Descripción
 
-La tarea asignada es una práctica para el uso de clases y objetos en PHP, aplicando la programación orientada a objetos (POO) y los pilares fundamentales de esta metodología, junto con una lógica sólida.
+La tarea asignada es una práctica para el uso de clases y objetos en PHP, aplicando la programación orientada a objetos (POO) y los pilares fundamentales de esta metodología.
+
+No era necesario implementar una interfaz de usuario para esta tarea.
 
 ## Objetivos
 

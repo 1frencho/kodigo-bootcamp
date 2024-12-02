@@ -7,8 +7,9 @@ class Library
   protected $users = [];
   protected $authors = [];
   protected $categories = [];
+  protected $borrowedBooks = [];
 
-  public function __construct($name, $books, $authors, $users, $categories)
+  public function __construct($name, $books, $authors, $users, $categories, $borrowedBooks)
   {
     $this->name = $name;
     $this->books = $books;
@@ -21,6 +22,13 @@ class Library
   public function getName()
   {
     return $this->name;
+  }
+
+  public function getBookByISBN($ISBN)
+  {
+    return array_filter($this->books, function ($book) use ($ISBN) {
+      return $book->getISBN() === $ISBN;
+    });
   }
 
   public function getBooks()
@@ -43,6 +51,11 @@ class Library
     return $this->categories;
   }
 
+  public function getBorrowedBooks()
+  {
+    return $this->borrowedBooks;
+  }
+
   // ---- Setters ----
   public function setBooks($books)
   {
@@ -63,5 +76,32 @@ class Library
   public function addUser($user)
   {
     $this->users[] = $user;
+  }
+
+  // Add loan
+
+  public function addLoan(Loan $loan)
+  {
+    $this->borrowedBooks[] = $loan;
+  }
+
+  // Add book
+  public function addBook(Book $book)
+  {
+    $this->books[] = $book;
+  }
+
+  // Update book
+  public function updateBook(Book $book)
+  {
+    $bookIndex = array_search($book, $this->books);
+    $this->books[$bookIndex] = $book;
+  }
+
+  // Remove book
+  public function removeBook(Book $book)
+  {
+    $bookIndex = array_search($book, $this->books);
+    unset($this->books[$bookIndex]);
   }
 }

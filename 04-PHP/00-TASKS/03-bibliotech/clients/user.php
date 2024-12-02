@@ -35,6 +35,22 @@ class Account extends User
     $this->role = $role;
   }
 
+  public function getId()
+  {
+    return $this->id;
+  }
+
+  public function getEmail()
+  {
+    return $this->email;
+  }
+
+  public function getRole()
+  {
+    return $this->role;
+  }
+
+
   // Register a new user
   public static function signUp($name, $lastName, $email, $password, $role, Library $library)
   {
@@ -61,7 +77,8 @@ class Account extends User
 
     // Compare the provided password's hash with the stored hashed password
     if (hash('sha256', $password) === $user->password) {
-      return "Authentication successful. Welcome, {$user->name} {$user->lastName}!";
+      echo "Authentication successful. Welcome, {$user->name} {$user->lastName}!";
+      return $user;
     } else {
       throw new Error("Invalid password. Try again.");
     }

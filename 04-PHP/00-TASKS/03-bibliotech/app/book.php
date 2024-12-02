@@ -1,6 +1,7 @@
 <?php
 
 
+
 class Category
 {
   protected $id;
@@ -76,7 +77,58 @@ class Book
   {
     return $this->ISBN;
   }
-  // 
+
+  public function getPublicationYear()
+  {
+    return $this->publicationYear;
+  }
+
+
+  // Setters
+
+  public function setTitle($title)
+  {
+    $this->title = $title;
+  }
+
+  public function setAuthorId($authorId)
+  {
+    $this->authorId = $authorId;
+  }
+
+  public function setCategoryId($categoryId)
+  {
+    $this->categoryId = $categoryId;
+  }
+
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+
+  public function setISBN($ISBN)
+  {
+    $this->ISBN = $ISBN;
+  }
+
+  // Update book 
+  public function updateBook(Book $book, Account $user, Library $library)
+  {
+    if ($user->getRole() !== 'admin') {
+      throw new Error("You are not authorized to update this book.");
+    }
+
+    $this->title = $book->getTitle();
+    $this->authorId = $book->getAuthorId();
+    $this->categoryId = $book->getCategoryId();
+    $this->publicationYear = $book->getPublicationYear();
+    $this->status = $book->getStatus();
+
+    $library->updateBook($this);
+
+    return "Book updated successfully.";
+  }
+
 
   // Static methods to search books
   public static function searchBooksByTitle($books, $title)
@@ -97,7 +149,6 @@ class Book
 
   public static function searchBooksByCategory($books, $categories, $categoryId)
   {
-    // Validate category ID exists in the categories list
     $categoryExists = array_filter($categories, function ($category) use ($categoryId) {
       return $category->getId() === $categoryId;
     });

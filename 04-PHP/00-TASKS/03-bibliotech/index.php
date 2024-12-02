@@ -1,11 +1,12 @@
 <?php
 
+
 // Task: Create a Library, it is not necessary to create a Client view for this task.
 
 // Load library resources - Structure - Client view was not requested for this task.
-require './admin/admin.php';
 require './app/author.php';
 require './app/book.php';
+require './app/loan.php';
 require './clients/user.php';
 require './settings/library.php';
 require './tools/uuidV4.php';
@@ -54,7 +55,7 @@ foreach ($categoriesData['categories'] as $category) {
 
 
 // Set Up Library
-$library = new Library('Bibliotech', $books, $authors, $users, $categories);
+$library = new Library('Bibliotech', $books, $authors, $users, $categories, []);
 
 // TESTING
 
@@ -74,14 +75,20 @@ print_r($library->getUsers());
 echo "</pre>";
 
 // User authentication - Admin
-echo "---------- User authentication - Admin ---------- <br>";
+echo "---------- User authentication - Admin and Client ---------- <br>";
+$userAdmin = null;
+$userClient = null;
 try {
-  echo Account::authenticate("albo@ola.com", "password432", $library);
+  $userAdmin =  Account::authenticate("albo@ola.com", "password432", $library);
+  echo "<br/>";
+  $userClient = Account::authenticate("ola@ola.com", "password123", $library);
 } catch (Error $e) {
   echo "Error: " . $e->getMessage();
 }
 echo "<br>";
 echo "<br>";
+
+
 
 // Search books with similar title
 echo "---------- Search books with similar title ---------- <br>";
@@ -121,3 +128,69 @@ try {
 } catch (Error $e) {
   echo "Error: " . $e->getMessage();
 }
+
+
+echo "<br>";
+echo "<br>";
+
+echo "---------- Request a book ---------- <br>";
+
+// Request a book
+try {
+  echo "<pre>";
+  print_r(Loan::requestBook('9780141439600', $library, $userClient));
+  // Trying to request same book again. Fails
+  echo "<br>";
+  print_r(Loan::requestBook('9780141439600', $library, $userClient));
+  echo "</pre>";
+} catch (Error $e) {
+  echo "Error: " . $e->getMessage();
+}
+
+echo "<br/>";
+echo "<br/>";
+
+echo "---------- Borrowed books ---------- <br>";
+
+echo "<pre>";
+print_r($library->getBorrowedBooks());
+echo "</pre>";
+
+
+echo "<br/>";
+echo "<br/>";
+
+// Update book
+echo "---------- Update book ---------- <br>";
+
+$singleBook = $library->getBookByISBN('9780141439600');
+
+$singleBook[0]->setTitle('New title');
+
+
+try {
+  print_r($singleBook[0]->updateBook($singleBook[0], $userAdmin, $library));
+  echo "<pre>";
+  print_r($library->getBooks());
+  echo "</pre>";
+} catch (Error $e) {
+  echo "Error: " . $e->getMessage();
+}
+
+?>
+
+
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+
+  pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+</style>
