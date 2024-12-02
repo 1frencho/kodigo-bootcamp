@@ -6,13 +6,15 @@ class Library
   protected $books = [];
   protected $users = [];
   protected $authors = [];
+  protected $categories = [];
 
-  public function __construct($name, $books, $authors, $users)
+  public function __construct($name, $books, $authors, $users, $categories)
   {
     $this->name = $name;
     $this->books = $books;
     $this->authors = $authors;
     $this->users = $users;
+    $this->categories = $categories;
   }
 
   // ---- Getters  ----
@@ -34,6 +36,11 @@ class Library
   public function getAuthors()
   {
     return $this->authors;
+  }
+
+  public function getCategories()
+  {
+    return $this->categories;
   }
 
   // ---- Setters ----

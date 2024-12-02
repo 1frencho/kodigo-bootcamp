@@ -13,15 +13,17 @@ require './tools/uuidV4.php';
 // // Get details from data mocks
 $jsonBooks = file_get_contents('./mocks/books.json');
 $jsonAuthors = file_get_contents('./mocks/authors.json');
-$jsonUsers = file_get_contents('./mocks/users.json');
+$jsonCategories = file_get_contents('./mocks/categories.json');
 
 $booksData = json_decode($jsonBooks, true); // Decode JSON as associative array
 $authorsData = json_decode($jsonAuthors, true); // Decode JSON as associative array
+$categoriesData = json_decode($jsonCategories, true); // Decode JSON as associative array
 
 // // Set available details to the Library
 $books = [];
 $authors = [];
 $users = [];
+$categories = [];
 
 foreach ($booksData['books'] as $book) {
   $books[] = new Book(
@@ -42,27 +44,80 @@ foreach ($authorsData['authors'] as $author) {
   );
 }
 
+foreach ($categoriesData['categories'] as $category) {
+  $categories[] = new Category(
+    $category['id'],
+    $category['name'],
+    $category['description']
+  );
+}
+
 
 // Set Up Library
-$library = new Library('Bibliotech', $books, $authors, $users);
+$library = new Library('Bibliotech', $books, $authors, $users, $categories);
 
 // TESTING
 
 // User registration
 try {
   echo Account::signUp("Marcos", "Alfaro", "ola@ola.com", "password123", 'user', $library);
+  echo "<br>";
   echo Account::signUp("Lola", "Admin", "albo@ola.com", "password432", 'admin', $library);
+  echo "<br>";
 } catch (Error $e) {
   echo "Error: " . $e->getMessage();
 }
-
+// Current users
+echo "---------- Current users ---------- ";
 echo "<pre>";
 print_r($library->getUsers());
 echo "</pre>";
 
-// User authentication
+// User authentication - Admin
+echo "---------- User authentication - Admin ---------- <br>";
 try {
   echo Account::authenticate("albo@ola.com", "password432", $library);
+} catch (Error $e) {
+  echo "Error: " . $e->getMessage();
+}
+echo "<br>";
+echo "<br>";
+
+// Search books with similar title
+echo "---------- Search books with similar title ---------- <br>";
+
+try {
+  echo "<pre>";
+  print_r(Book::searchBooksByTitle($library->getBooks(), "Harry Potter"));
+  echo "</pre>";
+} catch (Error $e) {
+  echo "Error: " . $e->getMessage();
+}
+
+echo "<br>";
+echo "<br>";
+
+echo "---------- Search books by authorID ---------- <br>";
+
+// Search books by author
+try {
+  echo "<pre>";
+  print_r(Book::searchBooksByAuthor($library->getBooks(), 1));
+  echo "</pre>";
+} catch (Error $e) {
+  echo "Error: " . $e->getMessage();
+}
+
+echo "<br>";
+echo "<br>";
+
+echo "---------- Search books by categoryID ---------- <br>";
+
+// Search books by category
+try {
+  echo "<pre>";
+  print_r(Book::searchBooksByCategory($library->getBooks(), $library->getCategories(), 1));
+  echo "</pre>";
 } catch (Error $e) {
   echo "Error: " . $e->getMessage();
 }

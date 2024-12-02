@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Classics",
+      "description": "Books that have stood the test of time and are considered timeless literature."
+    },
+    {
+      "id": 2,
+      "name": "Fantasy",
+      "description": "Books that contain magical or supernatural elements, set in imaginary worlds."
+    },
+    {
+      "id": 3,
+      "name": "Philosophy",
+      "description": "Books that explore fundamental questions about existence, knowledge, and ethics."
+    },
+    {
+      "id": 4,
+      "name": "Science Fiction",
+      "description": "Books that are based on speculative scientific concepts and futuristic settings."
+    }
+  ]
+}

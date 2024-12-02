@@ -2,13 +2,28 @@
   "authors": [
     {
       "id": 1,
-      "name": "George Orwell",
-      "biography": "Famous for 1984 and Animal Farm"
+      "name": "Jane Austen",
+      "biography": "Jane Austen was an English novelist known primarily for her six major novels which interpret and critique the British landed gentry at the end of the 18th century."
     },
     {
       "id": 2,
-      "name": "Harper Lee",
-      "biography": "Famous for To Kill a Mockingbird"
+      "name": "J.K. Rowling",
+      "biography": "J.K. Rowling is a British author, best known for writing the Harry Potter fantasy series which has won multiple awards and sold more than 500 million copies worldwide."
+    },
+    {
+      "id": 3,
+      "name": "J.D. Salinger",
+      "biography": "Jerome David Salinger was an American writer best known for his novel The Catcher in the Rye."
+    },
+    {
+      "id": 4,
+      "name": "F. Scott Fitzgerald",
+      "biography": "F. Scott Fitzgerald was an American novelist and short story writer, widely regarded as one of the greatest American writers of the 20th century."
+    },
+    {
+      "id": 5,
+      "name": "Paulo Coelho",
+      "biography": "Paulo Coelho is a Brazilian lyricist and novelist, best known for his novel The Alchemist, which has sold more than 150 million copies worldwide."
     }
   ]
 }

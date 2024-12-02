@@ -1,20 +1,44 @@
 {
   "books": [
     {
-      "ISBN": "12345",
-      "title": "1984",
+      "ISBN": "9780141439600",
+      "title": "Pride and Prejudice",
       "authorId": 1,
       "categoryId": 1,
-      "publicationYear": 1949,
-      "status": "Available"
+      "publicationYear": 1813,
+      "status": "available"
     },
     {
-      "ISBN": "67890",
-      "title": "To Kill a Mockingbird",
+      "ISBN": "9780439139601",
+      "title": "Harry Potter and the Prisoner of Azkaban",
       "authorId": 2,
-      "categoryId": 4,
-      "publicationYear": 1960,
-      "status": "Available"
+      "categoryId": 2,
+      "publicationYear": 1999,
+      "status": "checked out"
+    },
+    {
+      "ISBN": "9780316769488",
+      "title": "The Catcher in the Rye",
+      "authorId": 3,
+      "categoryId": 1,
+      "publicationYear": 1951,
+      "status": "available"
+    },
+    {
+      "ISBN": "9780743273565",
+      "title": "The Great Gatsby",
+      "authorId": 4,
+      "categoryId": 1,
+      "publicationYear": 1925,
+      "status": "available"
+    },
+    {
+      "ISBN": "9780156012195",
+      "title": "The Alchemist",
+      "authorId": 5,
+      "categoryId": 3,
+      "publicationYear": 1988,
+      "status": "reserved"
     }
   ]
 }
