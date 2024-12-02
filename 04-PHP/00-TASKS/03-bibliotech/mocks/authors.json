@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "name": "George Orwell",
+      "biography": "Famous for 1984 and Animal Farm"
+    },
+    {
+      "id": 2,
+      "name": "Harper Lee",
+      "biography": "Famous for To Kill a Mockingbird"
+    }
+  ]
+}

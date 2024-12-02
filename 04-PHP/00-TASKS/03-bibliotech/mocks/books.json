@@ -1,0 +1,20 @@
+{
+  "books": [
+    {
+      "ISBN": "12345",
+      "title": "1984",
+      "authorId": 1,
+      "categoryId": 1,
+      "publicationYear": 1949,
+      "status": "Available"
+    },
+    {
+      "ISBN": "67890",
+      "title": "To Kill a Mockingbird",
+      "authorId": 2,
+      "categoryId": 4,
+      "publicationYear": 1960,
+      "status": "Available"
+    }
+  ]
+}
