@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Order;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Task "1. Inserta al menos 5 registros en las tablas de usuarios y pedidos."
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // Name - Email - Phone Number
+        User::factory(15)->create();
+
+        // Product - Quantity - Total - User ID
+        Order::factory(25)->create();
     }
 }

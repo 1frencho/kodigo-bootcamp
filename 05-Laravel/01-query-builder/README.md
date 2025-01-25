@@ -1,66 +1,127 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+### README.md
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+```markdown
+# Laravel SQL Queries - Query Builder & Eloquent ORM
 
-## About Laravel
+## 📚 Project Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project demonstrates how to use Laravel's Query Builder and Eloquent ORM to execute SQL queries efficiently. It focuses on managing data for `users` and `orders` tables, as described in the activity guidelines.
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ⚙️ Setup and Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clone this repository:
 
-## Learning Laravel
+   ```bash
+   git clone
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Install dependencies:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   ```bash
+   composer install
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Copy `.env` and set up your database connection:
 
-## Laravel Sponsors
+   ```bash
+   cp .env.example .env
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. Generate the application key:
 
-### Premium Partners
+   ```bash
+   php artisan key:generate
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+5. Run migrations to create the database structure:
 
-## Contributing
+   ```bash
+   php artisan migrate
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Seed the database with sample data:
+   ```bash
+   php artisan db:seed
+   ```
+7. Start the development server:
 
-## Code of Conduct
+   ```bash
+   php artisan serve
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+8. Open the application in your browser:
+   ```bash
+   http://localhost:8000
+   ```
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🔗 API Endpoints
 
-## License
+### Users
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+| Method | Endpoint        | Description                                                              |
+| ------ | --------------- | ------------------------------------------------------------------------ |
+| GET    | `/api/v1/users` | Retrieves all users or filters by the first letter using `?startWith=R`. |
+
+### Orders
+
+| Method | Endpoint                                   | Description                                                                                               |
+| ------ | ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| GET    | `/api/v1/user/orders/{userId}`             | Retrieves all orders for the specified user ID.                                                           |
+| GET    | `/api/v1/orders`                           | Retrieves detailed orders with user info. Can filter by `?min=100&max=250` or sort by `?sortByTotal=asc`. |
+| GET    | `/api/v1/user/orders-count/{userId}`       | Calculates the total number of orders for the specified user ID.                                          |
+| GET    | `/api/v1/orders/total`                     | Retrieves the sum of all orders' totals.                                                                  |
+| GET    | `/api/v1/orders/most-cheap`                | Finds the cheapest order with user information.                                                           |
+| GET    | `/api/v1/orders/by-user-in-group/{userId}` | Retrieves grouped orders by user ID.                                                                      |
+
+---
+
+## 📝 Activity Instructions
+
+1. **Create a Laravel Project**: Set up a new Laravel project and configure the database connection.
+2. **Database Migrations**: Create migrations for `users` and `orders` tables based on the provided database schema.
+3. **Seed the Database**: Add at least 5 sample records for both tables.
+4. **Controller Methods**: Implement the following queries in the corresponding controllers:
+   - Retrieve orders by user ID.
+   - Include user information in order details.
+   - Filter orders by total range.
+   - Find users whose names start with a specific letter.
+   - Count orders by user ID.
+   - Retrieve orders and sort them by total.
+   - Calculate the sum of the total column in orders.
+   - Find the cheapest order and the associated user.
+   - Group orders by user.
+5. **Test Each Endpoint**: Verify all routes using Postman or similar tools.
+6. **Documentation**: Add clear comments in the code and provide detailed information in this `README.md`.
+7. **Repository Submission**: Push the code to a public GitHub repository for evaluation.
+
+---
+
+## 📊 Database Schema
+
+### Users Table
+
+| Column Name  | Data Type | Description         |
+| ------------ | --------- | ------------------- |
+| id           | Integer   | Primary key         |
+| name         | String    | Name of the user    |
+| email        | String    | Email of the user   |
+| phone_number | String    | User's phone number |
+| created_at   | Timestamp | Creation timestamp  |
+| updated_at   | Timestamp | Update timestamp    |
+
+### Orders Table
+
+| Column Name | Data Type | Description              |
+| ----------- | --------- | ------------------------ |
+| id          | Integer   | Primary key              |
+| product     | String    | Name of the product      |
+| quantity    | Integer   | Quantity ordered         |
+| total       | Decimal   | Total price of the order |
+| user_id     | Integer   | Foreign key to `users`   |
+| created_at  | Timestamp | Creation timestamp       |
+| updated_at  | Timestamp | Update timestamp         |
+
+---
